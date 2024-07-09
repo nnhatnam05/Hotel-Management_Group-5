@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pj.FXMLDocumentController">
+   <children>
+      <AnchorPane fx:id="fdocument" prefHeight="200.0" prefWidth="200.0" stylesheets="@../css/pj.css">
+         <children>
+            <AnchorPane prefHeight="400.0" prefWidth="310.0" styleClass="left-from" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <FontAwesomeIcon fill="WHITE" glyphName="BUILDING" layoutX="100.0" layoutY="144.0" size="10em" />
+                  <Label layoutX="54.0" layoutY="187.0" text="HOTEL MANAGEMENT" textFill="WHITE">
+                     <font>
+                        <Font name="Tahoma" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="flogin" layoutX="328.0" prefHeight="400.0" prefWidth="287.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <FontAwesomeIcon fill="#3f3951" glyphName="USER" layoutX="108.0" layoutY="110.0" size="6em" />
+                  <Label layoutX="77.0" layoutY="120.0" text="SIGN IN" textFill="#3f3951">
+                     <font>
+                        <Font name="Segoe UI Black" size="30.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtname_dn" layoutX="36.0" layoutY="177.0" prefHeight="30.0" prefWidth="200.0" promptText="USER NAME" styleClass="textfield" stylesheets="@../css/pj.css" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="51.19999999999999" />
+                  <PasswordField fx:id="txtpass_dn" layoutX="36.0" layoutY="224.0" prefHeight="30.0" prefWidth="200.0" promptText="PASSWORD" styleClass="textfield" stylesheets="@../css/pj.css" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="51.19999999999999" />
+                  <Button layoutX="91.0" layoutY="292.0" mnemonicParsing="false" onAction="#nutdangnhap" prefHeight="43.0" prefWidth="89.0" styleClass="login-btn" stylesheets="@../css/pj.css" text="LOGIN" AnchorPane.leftAnchor="91.0" AnchorPane.rightAnchor="106.6" />
+                  <Button fx:id="close_dn" layoutX="236.0" layoutY="2.0" mnemonicParsing="false" onAction="#nutthoat_dn" prefHeight="24.0" prefWidth="46.0" stylesheets="@../css/pj.css" AnchorPane.rightAnchor="4.800000000000011" AnchorPane.topAnchor="2.0">
+                     <graphic>
+                        <FontAwesomeIcon glyphName="CLOSE" size="1.2em" styleClass="close" />
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="close" />
+                        <String fx:value="top-form" />
+                     </styleClass>
+                  </Button>
+                  <Label layoutX="5.0" layoutY="361.0" text="You don't have an account?">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="signup_btn" layoutX="176.0" layoutY="358.0" mnemonicParsing="false" onAction="#nutdangky_dn" prefHeight="26.0" prefWidth="98.0" styleClass="minimize" stylesheets="@../css/pj.css" text="Sign Up Now!" textFill="#0048ff" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="fregister" layoutX="312.0" prefHeight="400.0" prefWidth="287.0" visible="false">
+               <children>
+                  <Label layoutX="82.0" layoutY="14.0" text="SIGN UP">
+                     <font>
+                        <Font name="Segoe UI Black" size="30.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtaddress_dk" layoutX="26.0" layoutY="189.0" prefHeight="30.0" prefWidth="230.0" promptText="ADDRESS" styleClass="textfield-room" stylesheets="@../css/pj.css" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="31.0" />
+                  <TextField fx:id="txtphone_dk" layoutX="26.0" layoutY="222.0" prefHeight="30.0" prefWidth="230.0" promptText="PHONE" styleClass="textfield-room" stylesheets="@../css/pj.css" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="31.0" />
+                  <PasswordField fx:id="txtpass_dk" layoutX="26.0" layoutY="123.0" prefHeight="30.0" prefWidth="230.0" promptText="PASSWORD" styleClass="textfield-room" stylesheets="@../css/pj.css" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="31.0" />
+                  <RadioButton fx:id="rdmale_dk" layoutX="17.0" layoutY="265.0" mnemonicParsing="false" text="Male" />
+                  <RadioButton fx:id="rdfemale_dk" layoutX="82.0" layoutY="265.0" mnemonicParsing="false" text="Female" />
+                  <RadioButton fx:id="rdother_dk" layoutX="163.0" layoutY="265.0" mnemonicParsing="false" text="Other" />
+                  <Button fx:id="createacc_btn" layoutX="23.0" layoutY="294.0" mnemonicParsing="false" onAction="#nutdangky" prefHeight="30.0" prefWidth="118.0" styleClass="login-btn" stylesheets="@../css/pj.css" text="Create Account" />
+                  <Button fx:id="canceldk_btn" layoutX="169.0" layoutY="296.0" mnemonicParsing="false" onAction="#nutthoat_dk" prefHeight="26.0" prefWidth="90.0" styleClass="cancel-btn" stylesheets="@../css/pj.css" text="Cancel" textFill="WHITE" />
+                  <Button fx:id="logindk_btn" layoutX="91.0" layoutY="358.0" mnemonicParsing="false" onAction="#nutdangnhap_dk" styleClass="login-btn" stylesheets="@../css/pj.css" text="Login Account" />
+                  <Label layoutX="118.0" layoutY="331.0" text="SIGN IN">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtusername_dk" layoutX="26.0" layoutY="57.0" prefHeight="30.0" prefWidth="230.0" promptText="USER NAME" styleClass="textfield-room" stylesheets="@../css/pj.css" />
+                  <TextField fx:id="txtemail_dk" layoutX="26.0" layoutY="156.0" prefHeight="30.0" prefWidth="230.0" promptText="EMAIL" styleClass="textfield-room" stylesheets="@../css/pj.css" />
+                  <TextField fx:id="txtfullname_dk" layoutX="26.0" layoutY="90.0" prefHeight="30.0" prefWidth="230.0" promptText="FULL NAME" styleClass="textfield-room" stylesheets="@../css/pj.css" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

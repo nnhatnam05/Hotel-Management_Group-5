@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pj.FXMLMainUserController">
+   <children>
+      <StackPane layoutX="465.0" layoutY="187.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <BorderPane layoutX="295.0" layoutY="143.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <left>
+                        <AnchorPane prefHeight="550.0" prefWidth="221.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <AnchorPane layoutY="-1.0" prefHeight="600.0" prefWidth="221.0" styleClass="nav-form" stylesheets="@../css/pj.css">
+                                 <children>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="USERS" layoutX="59.0" layoutY="106.0" size="8em" />
+                                    <Label layoutX="55.0" layoutY="120.0" text="Welcome, User" textFill="WHITE">
+                                       <font>
+                                          <Font name="Tahoma" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="user_name" alignment="CENTER" layoutX="30.0" layoutY="141.0" prefHeight="30.0" prefWidth="161.0" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Line endX="100.0" layoutX="111.0" layoutY="171.0" startX="-100.0" stroke="WHITE" />
+                                    <Button fx:id="homepage_btn" layoutX="13.0" layoutY="172.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="41.0" prefWidth="198.0" styleClass="nav-btn" stylesheets="@../css/pj.css" text="HOME PAGE" />
+                                    <Button fx:id="roomdetail_btn" layoutX="11.0" layoutY="213.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="41.0" prefWidth="198.0" styleClass="nav-btn" stylesheets="@../css/pj.css" text="ROOM DETAIL" />
+                                    <Button fx:id="contactus_btn" layoutX="11.0" layoutY="255.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="41.0" prefWidth="198.0" styleClass="nav-btn" stylesheets="@../css/pj.css" text="CONTACT US" />
+                                    <Button fx:id="profileuser_btn" layoutX="13.0" layoutY="297.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="41.0" prefWidth="198.0" styleClass="nav-btn" stylesheets="@../css/pj.css" text="PROFILE USER" />
+                                    <Button fx:id="blogs_btn" layoutX="11.0" layoutY="339.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="41.0" prefWidth="198.0" styleClass="nav-btn" stylesheets="@../css/pj.css" text="BLOGS" />
+                                    <Button fx:id="aboutus_btn" layoutX="11.0" layoutY="381.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="41.0" prefWidth="198.0" styleClass="nav-btn" stylesheets="@../css/pj.css" text="ABOUT US" />
+                                    <Line endX="30.0" layoutX="115.0" layoutY="213.0" startX="-100.0" stroke="WHITE" />
+                                    <Line endX="30.0" layoutX="115.0" layoutY="254.0" startX="-100.0" stroke="WHITE" />
+                                    <Line endX="30.0" layoutX="115.0" layoutY="296.0" startX="-100.0" stroke="WHITE" />
+                                    <Line endX="30.0" layoutX="115.0" layoutY="338.0" startX="-100.0" stroke="WHITE" />
+                                    <Line endX="30.0" layoutX="115.0" layoutY="380.0" startX="-100.0" stroke="WHITE" />
+                                    <Button fx:id="SignOut_btn" layoutX="15.0" layoutY="554.0" mnemonicParsing="false" onAction="#nutthoat_formuser" styleClass="logout-btn" stylesheets="@../css/pj.css">
+                                       <graphic>
+                                          <FontAwesomeIcon glyphName="SIGN_OUT" size="2em" />
+                                       </graphic>
+                                    </Button>
+                                    <Label layoutX="59.0" layoutY="560.0" text="Sign Out" textFill="WHITE">
+                                       <font>
+                                          <Font name="Tahoma" size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </left>
+                     <center>
+                        <AnchorPane fx:id="fmainuser" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <AnchorPane fx:id="profileuser_form" layoutX="11.0" layoutY="14.0" prefHeight="573.0" prefWidth="856.0" visible="false">
+                                 <children>
+                                    <AnchorPane layoutX="328.0" layoutY="187.0" prefHeight="573.0" prefWidth="856.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    <Label layoutX="14.0" layoutY="14.0" text="PROFILE USER">
+                                       <font>
+                                          <Font name="Tahoma Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <AnchorPane layoutX="6.0" layoutY="43.0" prefHeight="522.0" prefWidth="370.0" styleClass="white-bg" stylesheets="@../css/pj.css">
+                                       <children>
+                                          <Label layoutX="155.0" layoutY="261.0" text="USER, ">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView fitHeight="202.0" fitWidth="227.0" layoutX="84.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/images.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label fx:id="user_name_profile" alignment="CENTER" layoutX="121.0" layoutY="303.0" prefHeight="30.0" prefWidth="130.0">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="388.0" layoutY="45.0" prefHeight="518.0" prefWidth="460.0" styleClass="white-bg" stylesheets="@../css/pj.css">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="57.0" text="USER NAME">
+                                             <font>
+                                                <Font name="Tahoma Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txt_username" layoutX="157.0" layoutY="55.0" onAction="#initialize" prefHeight="30.0" prefWidth="240.0" styleClass="top-form" stylesheets="@../css/pj.css" />
+                                          <Label layoutX="14.0" layoutY="110.0" text="FULL NAME">
+                                             <font>
+                                                <Font name="Tahoma Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txt_fullname" layoutX="157.0" layoutY="108.0" onAction="#initialize" prefHeight="30.0" prefWidth="240.0" styleClass="top-form" stylesheets="@../css/pj.css" />
+                                          <Label layoutX="14.0" layoutY="163.0" text="PASSWORD">
+                                             <font>
+                                                <Font name="Tahoma Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txt_password" layoutX="157.0" layoutY="161.0" onAction="#initialize" prefHeight="30.0" prefWidth="240.0" styleClass="top-form" stylesheets="@../css/pj.css" />
+                                          <Label layoutX="14.0" layoutY="212.0" text="EMAIL">
+                                             <font>
+                                                <Font name="Tahoma Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txt_email" layoutX="157.0" layoutY="210.0" onAction="#initialize" prefHeight="30.0" prefWidth="240.0" styleClass="top-form" stylesheets="@../css/pj.css" />
+                                          <Label layoutX="14.0" layoutY="261.0" text="ADDRESS">
+                                             <font>
+                                                <Font name="Tahoma Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txt_address" layoutX="157.0" layoutY="259.0" onAction="#initialize" prefHeight="30.0" prefWidth="240.0" styleClass="top-form" stylesheets="@../css/pj.css" />
+                                          <Label layoutX="14.0" layoutY="314.0" text="PHONE">
+                                             <font>
+                                                <Font name="Tahoma Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txt_phone" layoutX="157.0" layoutY="312.0" onAction="#initialize" prefHeight="30.0" prefWidth="240.0" styleClass="top-form" stylesheets="@../css/pj.css" />
+                                          <Button layoutX="174.0" layoutY="401.0" mnemonicParsing="false" onAction="#profileUserEdit" prefHeight="51.0" prefWidth="113.0" styleClass="check-in-btn" stylesheets="@../css/pj.css" text="Edit Profile">
+                                             <graphic>
+                                                <FontAwesomeIcon glyphName="EDIT" size="1.5em" />
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                 </children></AnchorPane>
+                              <AnchorPane fx:id="aboutus_form" layoutX="6.0" layoutY="6.0" prefHeight="589.0" prefWidth="868.0" visible="false">
+                                 <children>
+                                    <AnchorPane layoutX="5.0" layoutY="7.0" prefHeight="572.0" prefWidth="858.0" styleClass="white-bg" stylesheets="@../css/pj.css">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="14.0" text="ABOUT US">
+                                             <font>
+                                                <Font name="Tahoma Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="269.0" layoutY="48.0" text="HOTEL MANAGEMENT" textFill="#0000eb">
+                                             <font>
+                                                <Font name="System Bold" size="30.0" />
+                                             </font>
+                                             <graphic>
+                                                <FontAwesomeIcon fill="#0000eb" glyphName="BUILDING" />
+                                             </graphic>
+                                          </Label>
+                                          <Label layoutX="14.0" layoutY="122.0" text="-">
+                                             <font>
+                                                <Font size="30.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="38.0" layoutY="134.0" text="We are a leading hotel, specializing in providing high-class accommodation services and modern amenities for visitors.">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+<!--                                          <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="644.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                                                    <Image url="" />
+                                                                                 </image>
+                                                                              </ImageView>-->
+                                          <Label layoutX="26.0" layoutY="157.0" text="With a convenient location and beautiful scenery, our hotel is committed to bringing a wonderful">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="26.0" layoutY="178.0" text="vacation experience to every customer.">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="14.0" layoutY="189.0" text="-">
+                                             <font>
+                                                <Font size="30.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="38.0" layoutY="203.0" text="Our hotel offers a variety of accommodations, from standard rooms to luxury suites, to meet">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="24.0" layoutY="226.0" text="the diverse needs of our guests. In addition, the hotel also has a restaurant, conference room, spa,">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="24.0" layoutY="247.0" text="gym and many other amenities so you can fully enjoy your vacation.">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+<!--                                          <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="18.0" layoutY="280.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                                                    <Image url="" />
+                                                                                 </image>
+                                                                              </ImageView>-->
+                                          <Label layoutX="14.0" layoutY="413.0" text="-">
+                                             <font>
+                                                <Font size="30.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="38.0" layoutY="425.0" text="Come to us to experience perfect service and feel the friendliness and professionalism in every moment.">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="218.0" layoutY="297.0" text="-">
+                                             <font>
+                                                <Font size="30.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="237.0" layoutY="309.0" text="Our staff is professionally trained and always ready to serve you with dedication and">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="224.0" layoutY="332.0" text="thoughtfulness. We believe that your comfort and satisfaction are top priorities, so we">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="223.0" layoutY="353.0" text="constantly strive to improve service quality and make you feel at home.">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Line endX="100.0" layoutX="432.0" layoutY="110.0" startX="-100.0" />
+                                          <ImageView fitHeight="131.0" fitWidth="209.0" layoutX="9.0" layoutY="277.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/images%20(1).png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="120.0" fitWidth="161.0" layoutX="671.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/images%20(2).png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="blogs_form" layoutX="9.0" layoutY="10.0" prefHeight="580.0" prefWidth="861.0" visible="false">
+                                 <children>
+                                    <AnchorPane layoutY="-1.0" prefHeight="582.0" prefWidth="860.0" styleClass="white-bg" stylesheets="@../css/pj.css">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="14.0" text="HOTEL MANAGEMENT BLOG">
+                                             <font>
+                                                <Font name="Tahoma Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <AnchorPane layoutX="17.0" layoutY="45.0" prefHeight="159.0" prefWidth="827.0" styleClass="white-bg" stylesheets="@../css/pj.css">
+                                             <children>
+<!--                                                <ImageView fitHeight="112.0" fitWidth="221.0" layoutX="14.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="" />
+                                                   </image>
+                                                </ImageView>-->
+                                                <Label layoutX="250.0" layoutY="68.0" text="LabeEssential Management Tools for Modern Industriesl">
+                                                   <font>
+                                                      <Font name="Tahoma" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="117.0" fitWidth="205.0" layoutX="14.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../img/1.jpg" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="14.0" layoutY="216.0" prefHeight="159.0" prefWidth="827.0" styleClass="white-bg" stylesheets="@../css/pj.css">
+                                             <children>
+<!--                                                <ImageView fitHeight="112.0" fitWidth="221.0" layoutX="14.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="" />
+                                                   </image>
+                                                </ImageView>-->
+                                                <Label layoutX="245.0" layoutY="50.0" text="From Check-In to Check-Out: The Role of Technology in">
+                                                   <font>
+                                                      <Font name="Tahoma" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="238.0" layoutY="80.0" text="Hotel Management System">
+                                                   <font>
+                                                      <Font name="Tahoma" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="117.0" fitWidth="205.0" layoutX="14.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../img/hotel-management-system.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="14.0" layoutY="391.0" prefHeight="159.0" prefWidth="827.0" styleClass="white-bg" stylesheets="@../css/pj.css">
+                                             <children>
+<!--                                                <ImageView fitHeight="117.0" fitWidth="221.0" layoutX="14.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="" />
+                                                   </image>
+                                                </ImageView>-->
+                                                <Label layoutX="253.0" layoutY="71.0" text="Hotel management and why you need it!">
+                                                   <font>
+                                                      <Font name="Tahoma" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="117.0" fitWidth="205.0" layoutX="16.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../img/images.jpeg" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="contactus_form" layoutX="13.0" layoutY="19.0" prefHeight="569.0" prefWidth="852.0" styleClass="white-bg" stylesheets="@../css/pj.css" visible="false">
+                                 <children>
+                                    <AnchorPane layoutX="13.0" layoutY="74.0" prefHeight="462.0" prefWidth="274.0" stylesheets="@../css/pj.css">
+                                       <children>
+                                          <Label layoutX="22.0" layoutY="44.0" text="Phone:" textFill="WHITE">
+                                             <graphic>
+                                                <FontAwesomeIcon fill="WHITE" glyphName="PHONE" size="2em" />
+                                             </graphic>
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="108.0" layoutY="50.0" text="+123 456 789" textFill="WHITE">
+                                             <font>
+                                                <Font name="Tahoma" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Line endX="100.0" layoutX="137.0" layoutY="87.0" startX="-100.0" stroke="WHITE" />
+                                          <Label layoutX="25.0" layoutY="123.0" text="Address:" textFill="WHITE">
+                                             <graphic>
+                                                <FontAwesomeIcon fill="WHITE" glyphName="PHONE" size="2em" />
+                                             </graphic>
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="119.0" layoutY="128.0" text="62 Street 36," textFill="WHITE">
+                                             <font>
+                                                <Font name="Tahoma" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Line endX="100.0" layoutX="136.0" layoutY="211.0" startX="-100.0" stroke="WHITE" />
+                                          <Label layoutX="28.0" layoutY="153.0" text="Van Phuc Residential Area, Hiep " textFill="WHITE">
+                                             <font>
+                                                <Font name="Tahoma" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="30.0" layoutY="172.0" text="Binh Phuoc Ward,Thu Duc City" textFill="WHITE">
+                                             <font>
+                                                <Font name="Tahoma" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="25.0" layoutY="244.0" text="Email:" textFill="WHITE">
+                                             <graphic>
+                                                <FontAwesomeIcon fill="WHITE" glyphName="PHONE" size="2em" />
+                                             </graphic>
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="108.0" layoutY="249.0" text="Hotelmng@gmail.com" textFill="WHITE">
+                                             <font>
+                                                <Font name="Tahoma" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Line endX="100.0" layoutX="136.0" layoutY="289.0" startX="-100.0" stroke="WHITE" />
+                                          <Label layoutX="23.0" layoutY="330.0" text="Website:" textFill="WHITE">
+                                             <graphic>
+                                                <FontAwesomeIcon fill="WHITE" glyphName="PHONE" size="2em" />
+                                             </graphic>
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="118.0" layoutY="335.0" text="Hotelmng.com" textFill="WHITE">
+                                             <font>
+                                                <Font name="Tahoma" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Line endX="100.0" layoutX="136.0" layoutY="375.0" startX="-100.0" stroke="WHITE" />
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="nav-form-ctu" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="303.0" layoutY="73.0" prefHeight="464.0" prefWidth="526.0" styleClass="nav-form-ctul" stylesheets="@../css/pj.css">
+                                       <children>
+                                          <Label layoutX="175.0" layoutY="14.0" text="GET IN TOUCH" textFill="WHITE">
+                                             <font>
+                                                <Font name="Tahoma Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="14.0" layoutY="63.0" prefHeight="26.0" prefWidth="230.0" promptText="Name" styleClass="textfield-room" stylesheets="@../css/pj.css" />
+                                          <TextField layoutX="281.0" layoutY="63.0" prefHeight="26.0" prefWidth="230.0" promptText="Email" styleClass="textfield-room" stylesheets="@../css/pj.css" />
+                                          <TextField layoutX="19.0" layoutY="130.0" prefHeight="26.0" prefWidth="493.0" promptText="Subject" styleClass="textfield-room" stylesheets="@../css/pj.css" />
+                                          <TextField alignment="TOP_LEFT" layoutX="52.0" layoutY="193.0" prefHeight="196.0" prefWidth="422.0" promptText="Comment" styleClass="white-bg" stylesheets="@../css/pj.css" />
+                                          <Button layoutX="197.0" layoutY="403.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="138.0" styleClass="check-in-btn" stylesheets="@../css/pj.css" text="Send Message">
+                                             <font>
+                                                <Font name="Tahoma Bold" size="15.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                    <Label layoutX="21.0" layoutY="14.0" text="CONTACT US">
+                                       <font>
+                                          <Font name="Tahoma Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="homepage_form" layoutX="279.0" layoutY="183.0" prefHeight="600.0" prefWidth="879.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <AnchorPane layoutX="328.0" layoutY="181.0" prefHeight="600.0" prefWidth="879.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+<!--                                          <ImageView fitHeight="293.0" fitWidth="887.0" layoutX="-2.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="304.0" fitWidth="322.0" layoutX="14.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true" />-->
+                                          <Button fx:id="btnaboutus" layoutX="387.0" layoutY="445.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="36.0" prefWidth="114.0" styleClass="aboutus-btn" stylesheets="@../css/pj.css" text="About Us">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Button>
+                                          <Label layoutX="406.0" layoutY="300.0" text="HOSPITALITY" textFill="#3e6097">
+                                             <font>
+                                                <Font name="Tahoma Bold" size="25.0" />
+                                             </font>
+                                          </Label>
+                                          <Line endX="100.0" layoutX="446.0" layoutY="332.0" startX="-8.0" />
+                                          <Label layoutX="345.0" layoutY="350.0" text="Situational awareness helps hospitality providers improve both risk">
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="331.0" layoutY="376.0" text="management and the guest experience, blending the best in safety">
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="331.0" layoutY="402.0" text="with the best of service through automation - all on one platform.">
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <AnchorPane layoutX="2.0" layoutY="3.0" prefHeight="296.0" prefWidth="874.0">
+                                             <children>
+                                                <ImageView fitHeight="293.0" fitWidth="876.0" layoutX="-1.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../img/homepage_top.png" />
+                                                   </image></ImageView>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="1.0" layoutY="296.0" prefHeight="303.0" prefWidth="327.0">
+                                             <children>
+                                                <ImageView fitHeight="303.0" fitWidth="328.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../img/homepage_botleft.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="roomdetail_form" layoutX="299.0" layoutY="169.0" prefHeight="600.0" prefWidth="880.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <AnchorPane layoutX="1.0" layoutY="30.0" prefHeight="565.0" prefWidth="876.0" styleClass="white-bg" stylesheets="@../css/pj.css">
+                                       <children>
+                                          <AnchorPane layoutX="338.0" layoutY="166.0" prefHeight="565.0" prefWidth="876.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <ImageView fitHeight="544.0" fitWidth="859.0" layoutX="-1.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../img/Three%20single%20bed.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <AnchorPane layoutX="11.0" layoutY="14.0" prefHeight="80.0" prefWidth="260.0" styleClass="white-bg" stylesheets="@../css/pj.css">
+                                                   <children>
+                                          <!--                                          <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                                                                                                    <Image url="" />
+                                                                                                                                 </image>
+                                                                                                                              </ImageView>
+                                                                                                                              <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
+                                                                                                                                 <image>
+                                                                                                                                    <Image url="" />
+                                                                                                                                 </image>
+                                                                                                                              </ImageView>
+                                                                                                                              <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="369.0" pickOnBounds="true" preserveRatio="true">
+                                                                                                                                 <image>
+                                                                                                                                    <Image url="" />
+                                                                                                                                 </image>
+                                                                                                                              </ImageView>-->
+                                                      <Label layoutX="14.0" layoutY="14.0" text="ONE PERSON ROOM">
+                                                         <font>
+                                                            <Font name="Tahoma" size="25.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="14.0" layoutY="46.0" text="- Single bed">
+                                                         <font>
+                                                            <Font name="Tahoma" size="20.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane layoutX="11.0" layoutY="117.0" prefHeight="73.0" prefWidth="281.0" styleClass="white-bg" stylesheets="@../css/pj.css">
+                                                   <children>
+                                                      <Label layoutX="17.0" layoutY="14.0" text="TWO PERSONS ROOM">
+                                                         <font>
+                                                            <Font name="Tahoma" size="25.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="14.0" layoutY="46.0" text="- Double bed">
+                                                         <font>
+                                                            <Font name="Tahoma" size="20.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane layoutX="11.0" layoutY="224.0" prefHeight="79.0" prefWidth="557.0" styleClass="white-bg" stylesheets="@../css/pj.css">
+                                                   <children>
+                                                      <Label layoutX="14.0" layoutY="14.0" text="THREE PERSONS ROOM">
+                                                         <font>
+                                                            <Font name="Tahoma" size="25.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="14.0" layoutY="46.0" text="- Three single beds OR One double bed and one single bed">
+                                                         <font>
+                                                            <Font name="Tahoma" size="20.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane layoutX="11.0" layoutY="331.0" prefHeight="81.0" prefWidth="269.0" styleClass="white-bg" stylesheets="@../css/pj.css">
+                                                   <children>
+                                                      <Label layoutX="14.0" layoutY="14.0" text="FOUR PEOPLE ROOM">
+                                                         <font>
+                                                            <Font name="Tahoma" size="25.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="14.0" layoutY="46.0" text="- Two double beds">
+                                                         <font>
+                                                            <Font name="Tahoma" size="20.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane layoutX="14.0" layoutY="439.0" prefHeight="80.0" prefWidth="301.0" styleClass="white-bg" stylesheets="@../css/pj.css">
+                                                   <children>
+                                                      <Label layoutX="14.0" layoutY="14.0" text="KING ROOM">
+                                                         <font>
+                                                            <Font name="Tahoma" size="25.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="14.0" layoutY="46.0" text="- Depending on room capacity">
+                                                         <font>
+                                                            <Font name="Tahoma" size="20.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                    <Label layoutX="14.0" layoutY="2.0" text="ROOM DETAIL">
+                                       <font>
+                                          <Font name="Tahoma Bold" size="25.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </center>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+      <Line endX="100.0" layoutX="654.0" layoutY="-29.0" startX="-32.0" stroke="WHITE" />
+      <Label layoutX="599.0" layoutY="-60.0" text="TYPES OF HOTEL ROOMS" textFill="WHITE">
+         <font>
+            <Font name="Tahoma Bold" size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

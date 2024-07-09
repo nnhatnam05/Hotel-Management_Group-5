@@ -1,0 +1,256 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Jun 10, 2024, 9:37:58 AM
+    Author     : ADMIN
+*/
+
+.white-bg{
+    -fx-background-color:#fff; 
+    -fx-border-color: #000;
+    -fx-border-width: .4px .4px.4px 0px;
+}
+.left-from{
+    -fx-background-color: linear-gradient(to bottom right, #2f3f89,#9231b5);
+    -fx-border-color: #000;
+    -fx-border-width: .4px 0px .4px .4px; 
+}
+.textfield{
+    -fx-background-color: transparent;
+    -fx-border-pc: #3f3951;
+    -fx-border-width: 0px 0px .8px 0px;
+    -fx-font-size: 13px;
+    -fx-font-family: "Tahoma";
+}
+.textfield:focused{
+    -fx-border-color: linear-gradient(to bottom right, #2f3f89,#9231b5);
+    -fx-border-width: 0px 0px 1.5px 0px;
+}
+.login-btn{
+    -fx-background-color: linear-gradient(to bottom, #4885da,#224e75);
+    -fx-background-radius: 20px 5px 20px 5px; 
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-font-family: "Tahoma";
+}
+.login-btn:hover{
+    -fx-background-color: linear-gradient(to bottom, #649de4,#3e78a7);
+}
+.close{
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+/*    -fx-border-color:#000;
+    -fx-border-radius: 5px;*/
+}
+.close:hover{
+    -fx-background-color: #e03f5a; 
+}
+
+/*MAIN CSS*/
+.top-form{
+    -fx-background-color: #fff;
+    -fx-border-color: #000;
+    -fx-border-width: .4px .4px .3px .4px;
+}
+.main-top-form{
+    -fx-background-color: #ddd;
+    -fx-border-color: #000;
+    -fx-border-width: 0px 0px .4px 0px;
+}
+.nav-form{
+    -fx-background-color: linear-gradient(to bottom right, #2f3f89,#9231b5);
+}
+.nav-btn{
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 15px;
+    -fx-font-family: "Arial";
+    -fx-alignment: CENTER_LEFT;
+}
+.logout-btn{
+    -fx-background-color: #6a5fff;
+    -fx-background-radius: 20px;
+    -fx-cursor: hand;
+}
+.login-btn:hover{
+    -fx-background-color: #8c84ff;
+}
+.cancel-btn{
+    -fx-background-color: #ff615c;
+    -fx-background-radius: 15px;
+    -fx-cursor: hand;
+}
+.cancel-btn:hover{
+    -fx-background-color: #fa1414;
+}
+.white-bg{
+    -fx-background-color: #fff;
+    -fx-padding: 10px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(three-pass-box,rgba(0,0,0,0.5),5,0,0,0);
+}
+.card{
+    -fx-background-color: linear-gradient(to right, #444857,#537e90);
+    -fx-background-radius: 5px;
+}
+.close{
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+.close:hover{
+    -fx-background-color: #e03f5a;
+}
+.minimize{
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+.minimize:hover{
+    -fx-background-color: #efefef;
+}
+
+/*AVAILABLE ROOMS*/
+.textfield-room{
+    -fx-background-color: #fff;
+    -fx-border-color: linear-gradient(to right, #444857, #537e90);
+/*    -fx-border-radius: 8px;*/
+    -fx-border-width: 0px 0px .8px 0px;
+    -fx-font-size: 13px;
+    -fx-font-family:"Tahoma";
+}
+.textfield-room:focused{
+    -fx-border-color: linear-gradient(to bottom right, #2f3f89,#9231b5);
+    -fx-border-width: 0px 0px 1.5px 0px;
+}
+.combo-box{
+    -fx-background-color: #fff;
+    -fx-background-radius: 5px;
+    -fx-border-color: linear-gradient(to right, #444857,#537e90);
+    -fx-border-width: .8px;
+    -fx-border-radius: .5px;
+    -fx-font-size: 13px;
+    -fx-font-family:"Tahoma";
+}
+.combo-box:focused{
+    -fx-border-color: linear-gradient(to bottom right, #2f3f89,#9231b5);
+    -fx-border-width: 1.5px;
+}
+.add-btn{
+    -fx-background-color: #3e608c;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: "Tahoma";
+}
+.add-btn:hover{
+    -fx-background-color: #6597d3;
+}
+.update-btn{
+    -fx-background-color: #754186;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: "Tahoma";
+}
+.update-btn:hover{
+    -fx-background-color: #c375dd;
+}
+.delete-btn{
+    -fx-background-color: #9d374a;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: "Tahoma";
+}
+.delete-btn:hover{
+    -fx-background-color: #e4657e;
+}
+.clear-btn{
+    -fx-background-color: #9d6245;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: "Tahoma";
+}
+.clear-btn:hover{
+    -fx-background-color: #e49c7b;
+}
+.receipt-btn{
+    -fx-background-color: #408654;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: "Tahoma";
+}
+.receipt-btn:hover{
+    -fx-background-color: #73da90;
+}
+.check-in-btn{
+    -fx-background-color: #468090;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: "Tahoma";
+}
+.check-in-btn:hover{
+    -fx-background-color: #6ec1d6;
+}
+.table_view{
+    -fx-background-color: transparent;
+    -fx-padding: 0px;
+    -fx-border-color: linear-gradient(to bottom right, #2f3f89,#9231b5);
+    -fx-border-radius: 8px;
+}
+.table_view .column-header-background{
+    -fx-background-color: linear-gradient(to bottom right, #2f3f89,#9231b5);
+    -fx-background-insets: 0 0 0 0;
+}
+.table_view .column-header ,filter{
+    -fx-background-color: transparent;
+    -fx-size: 50px;
+}
+.table_view .column-header .label{
+    -fx-text-fill: #fff;
+}
+.search{
+    -fx-background-color: transparent;
+    -fx-background-radius: 15px;
+    -fx-border-color: linear-gradient(to bottom right, #2f3f89,#9231b5);
+    -fx-border-radius: 5px 12px 5px 15px; 
+    -fx-border-width: 1px;
+    -fx-padding: 0px 0px 0px 20px; 
+}
+.search:focused{
+    -fx-border-width: 1.8px;
+}
+/*CSS MAIN USER*/
+
+.image-user{
+    -fx-border-color: #000000;
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+}
+.nav-form-ctu{
+    -fx-background-color: #0c79df;
+    -fx-text-fill: #ffffff;
+}
+.nav-form-ctul{
+    -fx-background-color: #005186;
+}
+.aboutus-btn{
+    -fx-background-color: transparent;
+    -fx-border-color: #3e6097;
+    -fx-border-radius: 5px;
+    -fx-text-fill: #3e6097;
+    -fx-font-family: "Tahoma";
+}

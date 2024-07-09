@@ -14,7 +14,7 @@ Hospitality is hotel management system helps hotel managers manage hotel operati
 	4. Nguyễn Quang Thịnh (Student1501052)	
  
 =======================================
-+ Documentations : https://github.com/VietVu1398/EasyCar_Group1/tree/main/Document
++ Documentations : https://github.com/nnhatnam05/Hotel-Management_Group-5/tree/main/Document
 + Database : https://github.com/nnhatnam05/Hotel-Management_Group-5/blob/main/HotelManagement.sql
 + Link video giới thiệu website: https://youtu.be/H5awb9Yhmh4?si=Tlqr5ioLCQiF23GY
 

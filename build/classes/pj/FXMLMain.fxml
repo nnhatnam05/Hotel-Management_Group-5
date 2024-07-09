@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="main_form" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pj.FXMLMainController">
+   <children>
+      <StackPane layoutX="420.0" layoutY="123.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="fmain" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <BorderPane layoutX="208.0" layoutY="100.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <top>
+                        <AnchorPane prefHeight="50.0" prefWidth="1100.0" styleClass="main-top-form" stylesheets="@../css/pj.css" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button fx:id="exit_btn" layoutX="1035.0" layoutY="12.0" mnemonicParsing="false" onAction="#nutx_formmain" prefHeight="26.0" prefWidth="51.0" stylesheets="@../css/pj.css">
+                                 <graphic>
+                                    <FontAwesomeIcon glyphName="CLOSE" size="1.5em" />
+                                 </graphic>
+                                 <styleClass>
+                                    <String fx:value="close" />
+                                    <String fx:value="top-form" />
+                                 </styleClass>
+                              </Button>
+                              <Label layoutX="14.0" layoutY="16.0" text="HOTEL MANAGEMENT">
+                                 <font>
+                                    <Font name="Tahoma" size="12.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIcon glyphName="BUILDING" size="1.5em" />
+                                 </graphic>
+                              </Label>
+                           </children></AnchorPane>
+                     </top>
+                     <left>
+                        <AnchorPane prefHeight="550.0" prefWidth="221.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="48.0" prefHeight="550.0" prefWidth="221.0" styleClass="nav-form" stylesheets="@../css/pj.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="73.0" layoutY="120.0" size="8em" />
+                                    <Label layoutX="71.0" layoutY="140.0" text="Welcome," textFill="WHITE">
+                                       <font>
+                                          <Font name="Tahoma" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="username" alignment="CENTER" layoutY="172.0" prefHeight="30.0" prefWidth="221.0" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="Dashboard_btn" layoutX="12.0" layoutY="234.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="41.0" prefWidth="198.0" styleClass="nav-btn" stylesheets="@../css/pj.css" text="Dashboard">
+                                       <graphic>
+                                          <FontAwesomeIcon fill="WHITE" glyphName="DASHBOARD" size="1.2em" />
+                                       </graphic>
+                                    </Button>
+                                    <Line endX="106.0" layoutX="101.0" layoutY="211.0" startX="-89.0" stroke="WHITE" />
+                                    <Button fx:id="AvailRoom_btn" layoutX="12.0" layoutY="275.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="41.0" prefWidth="198.0" styleClass="nav-btn" stylesheets="@../css/pj.css" text="Available Rooms">
+                                       <graphic>
+                                          <FontAwesomeIcon fill="WHITE" glyphName="CHECK_CIRCLE" size="1.2em" />
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="Customer_btn" layoutX="12.0" layoutY="316.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="41.0" prefWidth="198.0" styleClass="nav-btn" stylesheets="@../css/pj.css" text="Customers">
+                                       <graphic>
+                                          <FontAwesomeIcon fill="WHITE" glyphName="USERS" size="1.2em" />
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="SignOut_btn" layoutX="12.0" layoutY="498.0" mnemonicParsing="false" onAction="#nutthoat_formmain" styleClass="logout-btn" stylesheets="@../css/pj.css">
+                                       <graphic>
+                                          <FontAwesomeIcon fill="WHITE" glyphName="SIGN_OUT" size="2em" />
+                                       </graphic>
+                                    </Button>
+                                    <Label layoutX="63.0" layoutY="504.0" text="Sign Out" textFill="WHITE">
+                                       <font>
+                                          <Font name="Tahoma" size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </left>
+                     <center>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <AnchorPane fx:id="dashboard_form" layoutX="112.0" layoutY="175.0" prefHeight="550.0" prefWidth="879.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <AnchorPane layoutX="12.0" layoutY="14.0" prefHeight="171.0" prefWidth="861.0" stylesheets="@../css/pj.css">
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <AnchorPane layoutX="306.0" layoutY="22.0" prefHeight="127.0" prefWidth="250.0" styleClass="card" stylesheets="@../css/pj.css">
+                                             <children>
+                                                <FontAwesomeIcon fill="WHITE" glyphName="MONEY" layoutX="27.0" layoutY="70.0" size="5em" text="" />
+                                                <Label layoutX="55.0" layoutY="79.0" text="Today's Income" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Tahoma" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="dashboard_incometoday" alignment="CENTER_RIGHT" layoutX="94.0" layoutY="18.0" prefHeight="29.0" prefWidth="145.0" text="\$0.0" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Berlin Sans FB" size="25.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="591.0" layoutY="22.0" prefHeight="127.0" prefWidth="250.0" styleClass="card" stylesheets="@../css/pj.css">
+                                             <children>
+                                                <FontAwesomeIcon fill="WHITE" glyphName="DOLLAR" layoutX="20.0" layoutY="65.0" size="5em" />
+                                                <Label fx:id="dashboard_totalincome" alignment="CENTER_RIGHT" layoutX="81.0" layoutY="30.0" prefHeight="29.0" prefWidth="157.0" text="\$0.0" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Berlin Sans FB" size="25.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="67.0" layoutY="74.0" text="Total Income" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Tahoma" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="14.0" layoutY="23.0" prefHeight="127.0" prefWidth="250.0" styleClass="card" stylesheets="@../css/pj.css">
+                                             <children>
+                                                <FontAwesomeIcon fill="WHITE" glyphName="CHECK" layoutX="14.0" layoutY="68.0" size="5em" />
+                                                <Label layoutX="67.0" layoutY="77.0" text="Today's Book" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Tahoma" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="dashboard_booktoday" alignment="CENTER_RIGHT" layoutX="82.0" layoutY="18.0" prefHeight="29.0" prefWidth="161.0" text="0" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Berlin Sans FB" size="25.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="12.0" layoutY="201.0" prefHeight="343.0" prefWidth="861.0" styleClass="white-bg" stylesheets="@../css/pj.css">
+                                       <children>
+                                          <AreaChart fx:id="dashboard_areachart" layoutX="34.0" layoutY="36.0" prefHeight="291.0" prefWidth="814.0" title="Data Income" AnchorPane.bottomAnchor="36.0" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="33.0" AnchorPane.topAnchor="36.0">
+                                            <xAxis>
+                                              <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                          </AreaChart>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="availableRoom_form" layoutX="81.0" layoutY="52.0" prefHeight="550.0" prefWidth="879.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <AnchorPane layoutX="14.0" layoutY="15.0" prefHeight="521.0" prefWidth="256.0" styleClass="white-bg" stylesheets="@../css/pj.css">
+                                       <children>
+                                          <TextField fx:id="availableroom_room" layoutX="92.0" layoutY="51.0" onAction="#availableroomroom" prefHeight="28.0" prefWidth="154.0" styleClass="textfield-room" stylesheets="@../css/pj.css" />
+                                          <Label layoutX="43.0" layoutY="57.0" text="Room #:" />
+                                          <Label layoutX="24.0" layoutY="90.0" text="Room type:" AnchorPane.leftAnchor="15.0" />
+                                          <ComboBox fx:id="avavailibleroom_roomtype" layoutX="93.0" layoutY="86.0" onAction="#avavailibleroomroomtype" prefWidth="150.0" promptText="Choose" styleClass="combo-box" stylesheets="@../css/pj.css" />
+                                          <Label layoutX="49.0" layoutY="122.0" text="Status:" AnchorPane.leftAnchor="40.0" />
+                                          <ComboBox fx:id="avavailibleroom_status" layoutX="92.0" layoutY="118.0" onAction="#avavailibleroomstatus" prefWidth="150.0" promptText="Choose" styleClass="combo-box" stylesheets="@../css/pj.css" />
+                                          <TextField fx:id="availableroom_price" layoutX="94.0" layoutY="150.0" onAction="#availableroomprice" prefHeight="28.0" prefWidth="149.0" styleClass="textfield-room" stylesheets="@../css/pj.css" />
+                                          <Label layoutX="56.0" layoutY="154.0" text="Price:" AnchorPane.leftAnchor="45.0" />
+                                          <Button fx:id="availableroom_addbtn" layoutX="19.0" layoutY="240.0" mnemonicParsing="false" onAction="#availableRoomsAdd" prefHeight="32.0" prefWidth="88.0" styleClass="add-btn" stylesheets="@../css/pj.css" text="Add" />
+                                          <Button fx:id="availableroom_updatebtn" layoutX="154.0" layoutY="240.0" mnemonicParsing="false" onAction="#avilableRoomsUpdate" prefHeight="32.0" prefWidth="88.0" styleClass="update-btn" stylesheets="@../css/pj.css" text="Update" />
+                                          <Button fx:id="availableroom_clearbtn" layoutX="19.0" layoutY="289.0" mnemonicParsing="false" onAction="#availableRoomsClear" prefHeight="32.0" prefWidth="88.0" styleClass="clear-btn" stylesheets="@../css/pj.css" text="Clear" />
+                                          <Button fx:id="availableroom_deletebtn" layoutX="154.0" layoutY="289.0" mnemonicParsing="false" onAction="#availableRoomsDelete" prefHeight="32.0" prefWidth="88.0" styleClass="delete-btn" stylesheets="@../css/pj.css" text="Delete" />
+                                          <Button fx:id="availableroom_checkinbtn" layoutX="65.0" layoutY="405.0" mnemonicParsing="false" onAction="#availableRoomsChekIn" prefHeight="35.0" prefWidth="133.0" styleClass="check-in-btn" stylesheets="@../css/pj.css" text="Check-In" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="286.0" layoutY="15.0" prefHeight="521.0" prefWidth="575.0" styleClass="white-bg" stylesheets="@../css/pj.css">
+                                       <children>
+                                          <TableView fx:id="availableroom_tableview" layoutX="20.0" layoutY="66.0" onMouseClicked="#availableRoomsSelectData" prefHeight="434.0" prefWidth="537.0" styleClass="table_view" stylesheets="@../css/pj.css">
+                                            <columns>
+                                              <TableColumn fx:id="availableroom_col_roomnumber" prefWidth="125.0" text="Room#" />
+                                              <TableColumn fx:id="availableroom_col_roomtype" prefWidth="142.0" text="Room Type" />
+                                                <TableColumn fx:id="availableroom_col_status" prefWidth="131.0" text="Status" />
+                                                <TableColumn fx:id="availableroom_col_price" prefWidth="152.0" text="Price($)" />
+                                            </columns>
+                                          </TableView>
+                                          <TextField fx:id="availableroom_search" layoutX="20.0" layoutY="25.0" onAction="#availableRoomsSearch" prefHeight="30.0" prefWidth="256.0" promptText="Search" styleClass="search" stylesheets="@../css/pj.css" />
+                                          <FontAwesomeIcon glyphName="SEARCH" layoutX="26.0" layoutY="47.0" size="1.5em" text="" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="Customer_form" layoutX="8.0" layoutY="7.0" prefHeight="532.0" prefWidth="859.0" styleClass="white-bg" stylesheets="@../css/pj.css" visible="false" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="7.0">
+                                 <children>
+                                    <AnchorPane layoutX="14.0" layoutY="32.0" prefHeight="478.0" prefWidth="823.0">
+                                       <children>
+                                          <TableView fx:id="customer_tableView" layoutX="6.0" layoutY="48.0" prefHeight="416.0" prefWidth="811.0" styleClass="table_view" stylesheets="@../css/pj.css">
+                                            <columns>
+                                              <TableColumn fx:id="customer_customernumber" prefWidth="75.0" text="Customer #" />
+                                              <TableColumn fx:id="customer_firstname" prefWidth="116.0" text="First Name" />
+                                                <TableColumn fx:id="customer_lastname" prefWidth="133.0" text="Last Name" />
+                                                <TableColumn fx:id="customer_phone" prefWidth="136.0" text="Phone #" />
+                                                <TableColumn fx:id="customer_total" prefWidth="129.0" text="Total Payment" />
+                                                <TableColumn fx:id="customer_checkin" prefWidth="117.0" text="Checked-In" />
+                                                <TableColumn fx:id="customer_checkout" prefWidth="104.0" text="Checked-Out" />
+                                            </columns>
+                                          </TableView>
+                                          <TextField fx:id="customer_search" layoutX="12.0" layoutY="7.0" onKeyTyped="#customerSearch" prefHeight="30.0" prefWidth="271.0" promptText="Search" styleClass="search" stylesheets="@../css/pj.css" />
+                                          <FontAwesomeIcon glyphName="SEARCH" layoutX="14.0" layoutY="28.0" size="1.5em" text="" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </center>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
